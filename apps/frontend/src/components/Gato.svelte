@@ -22,9 +22,7 @@
 </script>
 
 <div>
-	Invite your friend to play with this link: <a href="http://localhost:5173/u/{opponentId}"
-		>http://localhost:5173/u/{opponentId}</a
-	>
+	Invite your friend to play with this link: {import.meta.env.VITE_FRONTEND_URL}/u/{opponentId}
 </div>
 
 {#if (gameState === 'X_WON' && mySide === 'X') || (gameState === 'O_WON' && mySide === 'O')}
