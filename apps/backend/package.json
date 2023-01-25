@@ -9,6 +9,7 @@
   "dependencies": {
     "core": "workspace:*",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "http": "^0.0.1-security",
     "socket.io": "^4.5.4"

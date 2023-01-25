@@ -1,5 +1,9 @@
 import type { GatoClientSocket } from 'core';
 import { io } from 'socket.io-client';
-const ENDPOINT = 'http://localhost:3000';
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
-export const socket: GatoClientSocket = io(ENDPOINT);
+if (!backendUrl) {
+	throw new Error('VITE_BACKEND_URL not set');
+}
+
+export const socket: GatoClientSocket = io(backendUrl);
